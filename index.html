@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Servicios | Imprenta y Diseño Digital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2D3142;
+            --secondary-color: #EF8354;
+            --bg-light: #F4F5F7;
+            --text-dark: #4F5D75;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45, 49, 66, 0.8), rgba(45, 49, 66, 0.8)), url('https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d16b3d;
+            transform: translateY(-2px);
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .services h2 {
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Mayorista / Marketing Section */
+        .mayorista {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 5rem 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .mayorista-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mayorista-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .mayorista-form {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1c26;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SEVEN</h1>
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#mayoristas">Ventas por Mayor</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Impresión y Diseño que Destaca</h2>
+        <p>Desde agendas personalizadas hasta merchandising corporativo. Materializamos tus ideas con la mejor calidad artesanal y digital.</p>
+        <a href="#mayoristas" class="btn">Conocé nuestros planes para empresas</a>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-book"></i>
+                <h3>Encuadernación</h3>
+                <p>Agendas personalizadas y encuadernados artesanales de alta durabilidad.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-print"></i>
+                <h3>Imprenta Digital</h3>
+                <p>Impresiones a color, fotografías de alta calidad, plastificados y stickers.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Sublimación</h3>
+                <p>Gorras, tazas, llaveros y bolsas ecológicas con tu logo o diseño favorito.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Diseño Digital</h3>
+                <p>Creación de identidad visual para que tu marca se destaque en el mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mayoristas" class="mayorista">
+        <div class="mayorista-info">
+            <h2>Hacé crecer tu negocio con Seven</h2>
+            <p>Implementá nuestro <strong>Programa de Revendedores y Corporativo</strong>. Ideales para eventos, escuelas, empresas y comercios que buscan merchandising de calidad.</p>
+            <br>
+            <ul style="list-style: none;">
+                <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Precios escalonados por volumen</li>
+                <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Prioridad en tiempos de producción</li>
+                <li><i class="fas fa-check" style="color: var(--secondary-color);"></i> Asesoramiento en diseño gratuito para pedidos grandes</li>
+            </ul>
+        </div>
+        
+        <div class="mayorista-form">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Solicitá Presupuesto Mayorista</h3>
+            <form id="leadForm">
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Tu Nombre o Empresa" required>
+                </div>
+                <div class="form-group">
+                    <select id="interes" required>
+                        <option value="">¿Qué producto te interesa por mayor?</option>
+                        <option value="Merchandising (Tazas, Llaveros, Gorras)">Merchandising (Tazas, Llaveros, Gorras)</option>
+                        <option value="Papelería (Agendas, Cuadernos)">Papelería (Agendas, Cuadernos)</option>
+                        <option value="Stickers e Imprenta">Stickers e Impresión</option>
+                        <option value="Varios/Otro">Varios / Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="cantidad" placeholder="Cantidad aproximada" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Enviar por WhatsApp <i class="fab fa-whatsapp"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 1rem;">
+            <a href="https://www.instagram.com/sevenservicios/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Seven Servicios. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Lógica para capturar el Lead y enviarlo directamente a WhatsApp
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const interes = document.getElementById('interes').value;
+            const cantidad = document.getElementById('cantidad').value;
+            
+            // Reemplazar con el número de teléfono real de Seven Servicios (incluir código de país sin el +)
+            const numeroWhatsApp = "549XXXXXXXXXX"; 
+            
+            const mensaje = `¡Hola Seven! Soy ${nombre}. Me gustaría consultar por precios mayoristas para ${cantidad} unidades de ${interes}. ¿Me podrían enviar información?`;
+            
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
